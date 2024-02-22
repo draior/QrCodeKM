@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:zxing="clr-namespace:ZXing.Net.Mobile.Forms;assembly=ZXing.Net.Mobile.Forms"             
+             x:Class="QrCodeKM.MainPage">
+
+    <StackLayout>
+        
+        <!-- Image control for displaying a static picture -->
+        <Image x:Name="staticImage" IsVisible="true" Source="resource://QrCodeKM.Droid.drawable.QrImage.png"/>
+
+        <zxing:ZXingScannerView x:Name="scannerView" IsVisible="false" OnScanResult="OnScanResult" IsScanning="false" IsTorchOn="false"/>
+
+        <!-- Button to start scanning -->
+        <Button Text="Scan QR Code" Clicked="ScanButton_Clicked" />
+
+        <!-- Label decoded QR -->
+        <Label x:Name="decodedLabel" Text="" />
+
+        <!-- will be uset for configuration -->
+        <Button Text="Settings" Clicked="Settings_Clicked" />
+
+        <Button Text="Clear" Clicked="Clear_Clicked" />
+
+        <Label x:Name="lblMsg" Text=""
+               LineBreakMode="WordWrap"
+               HorizontalOptions="Start"
+               VerticalOptions="EndAndExpand"
+               FontSize="Large"/>
+
+    </StackLayout>
+
+</ContentPage>

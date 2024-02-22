@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="QrCodeKM.SettingsPage">
+
+    <StackLayout Padding="10">
+        <Label Text="Server Settings" FontAttributes="Bold" FontSize="Large" HorizontalOptions="Center" Margin="0,10,0,20"/>
+        <!-- Add Entry fields for IP, port, and endpoint -->
+        <Label Text="IP Address:"/>
+        <Entry Placeholder="IP Address" x:Name="ipEntry" />
+        
+        <Label Text="Port:"/>
+        <Entry Placeholder="Port" x:Name="portEntry" />
+        
+        <Label Text="Endpoint:"/>
+        <Entry Placeholder="Endpoint" x:Name="endpointEntry" IsReadOnly="True"/>
+        
+        <Label Text="Businessgroup:"/>
+        <Entry Placeholder="BG" x:Name="bgEntry" />
+
+        <!-- Add a test button -->
+        <Button Text="Test" Clicked="TestButton_Clicked" />
+        
+        <!-- Add a Save button -->
+        <Button Text="Save" Clicked="SaveButton_Clicked" />
+    </StackLayout>
+</ContentPage>
